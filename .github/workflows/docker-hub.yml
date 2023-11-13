@@ -31,4 +31,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: "acolominas/fastapi-test:${{ steps.commit.outputs.short }},acolominas/fastapi-test:latest"
+          tags: "${{ env.DOCKER_REPO }}:${{ steps.commit.outputs.short }},${{ env.DOCKER_REPO }}:latest"
