@@ -5,11 +5,12 @@ on:
 
 jobs:
   docker:
+    name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
       - id: commit
         uses: prompt/actions-commit-hash@v3
-        
+
       - name: Checkout
         uses: actions/checkout@v3
 
