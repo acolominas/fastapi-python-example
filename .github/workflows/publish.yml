@@ -7,6 +7,9 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
+      - id: commit
+        uses: prompt/actions-commit-hash@v3
+        
       - name: Checkout
         uses: actions/checkout@v3
 
@@ -27,4 +30,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: acolominas/fastapi-test:latest
+          tags: ${{ steps.commit.outputs.short }}
