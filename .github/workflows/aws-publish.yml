@@ -63,7 +63,7 @@ jobs:
         with:
           task-definition: ${{ env.ECS_TASK_DEFINITION }}
           container-name: ${{ env.CONTAINER_NAME }}
-          image: ${{ steps.build-image.outputs.image }
+          image: ${{ steps.build-image.outputs.image }}
           log-configuration-log-driver: awslogs
           log-configuration-options: |
             awslogs-group=/aws/ecs/aci-ecsserv-fastapi-dev-euw1-01
