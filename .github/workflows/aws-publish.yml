@@ -20,7 +20,7 @@ env:
   ECS_SERVICE: aci-ecsserv-fastapi-dev-euw1-01
   ECS_CLUSTER: aci-ecsclu-fastapi-dev-euw1
   ECS_TASK_DEFINITION: infrastructure/development/aws/fastapi_task_definition.json
-  CONTAINER_NAME: fastapi
+  CONTAINER_NAME: dummy
 
 
 jobs:

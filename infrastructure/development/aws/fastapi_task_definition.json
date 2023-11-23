@@ -4,7 +4,7 @@
     "executionRoleArn": "arn:aws:iam::004914726163:role/aci-iamrole-fastapi-dev-euw1-01",
     "containerDefinitions": [
         {
-            "name": "fastapi",
+            "name": "dummy",
             "image": "nginx",
             "cpu": 100,
             "memory": 100,
