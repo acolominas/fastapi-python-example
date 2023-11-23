@@ -16,10 +16,11 @@ on:
 
 env:
   AWS_REGION: ${{ vars.AWS_REGION }}
+  ENVIRONMENT: ${{ github.event.pull_request.base.ref }}
   ECR_REPOSITORY: ${{ vars.ECR_REPOSITORY }}
   ECS_SERVICE: ${{ vars.ECS_SERVICE }}
   ECS_CLUSTER: ${{ vars.ECS_CLUSTER }}
-  ECS_TASK_DEFINITION: infrastructure/${{ github.base_ref }}/aws/fastapi_task_definition.json
+  ECS_TASK_DEFINITION: infrastructure/${{ env.ENVIRONMENT }}/aws/fastapi_task_definition.json
   CONTAINER_NAME: dummy
 
 
