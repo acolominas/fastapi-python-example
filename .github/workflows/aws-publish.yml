@@ -12,14 +12,14 @@ name: Deploy to Amazon ECS
 on:
   push:
     branches:
-      - main
+      - development
 
 env:
   AWS_REGION: eu-west-1
-  ECR_REPOSITORY: aci-ecrrepo-fastapi-dev-euw1-01
-  ECS_SERVICE: aci-ecsserv-fastapi-dev-euw1-01
-  ECS_CLUSTER: aci-ecsclu-fastapi-dev-euw1
-  ECS_TASK_DEFINITION: infrastructure/development/aws/fastapi_task_definition.json
+  ECR_REPOSITORY: ${{ vars.ECR_REPOSITORY }}
+  ECS_SERVICE: ${{ vars.ECS_SERVICE }}
+  ECS_CLUSTER: ${{ vars.ECS_CLUSTER }}
+  ECS_TASK_DEFINITION: infrastructure/${{ GITHUB_BASE_REF }}/aws/fastapi_task_definition.json
   CONTAINER_NAME: dummy
 
 
@@ -27,7 +27,7 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    environment: production
+    environment: development
 
     steps:
       - name: Checkout
