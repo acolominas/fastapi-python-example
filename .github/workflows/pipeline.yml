@@ -11,4 +11,4 @@ jobs:
   prod:
     name: Prod Deployment
     needs: dev
-    uses: ./.github/workflows/deploy-prod.yml
+    uses: ./.github/workflows/deploy-pro.yml
