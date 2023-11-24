@@ -6,9 +6,9 @@ on:
 jobs:
   dev:
     name: Dev Deployment
-    uses: ./github/workflows/deploy-dev.yml
+    uses: ./.github/workflows/deploy-dev.yml@{BRANCH}
 
   prod:
     name: Prod Deployment
     needs: dev
-    uses: ./github/workflows/deploy-prod.yml
+    uses: ./.github/workflows/deploy-prod.yml@main{BRANCH}
