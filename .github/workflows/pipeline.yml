@@ -28,7 +28,7 @@ jobs:
     uses: ./.github/workflows/deploy-aws.yml
     with:
       ENVIRONMENT: production
-      AWS_REGION: ${{ vars.AWS_DEFAULT_REGION }}
+      AWS_DEFAULT_REGION: ${{ vars.AWS_DEFAULT_REGION }}
       ECR_REPOSITORY: ${{ vars.ECR_REPOSITORY }}
       ECS_SERVICE: ${{ vars.ECS_SERVICE }}
       ECS_CLUSTER: ${{ vars.ECS_CLUSTER }}
