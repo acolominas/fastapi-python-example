@@ -1,4 +1,4 @@
-name: Deploy to ECS - Pro Environment
+name: Deploy to ECS
 
 on:
   workflow_call:
