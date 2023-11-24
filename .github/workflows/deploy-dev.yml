@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - development
-
 env:
   ENVIRONMENT: ${{ github.base.ref }}
   ECR_REPOSITORY: ${{ vars.ECR_REPOSITORY }}
