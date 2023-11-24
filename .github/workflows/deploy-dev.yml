@@ -1,7 +1,9 @@
 name: Deploy to ECS - Dev Environment
 
 on:
-  workflow_call:
+  push:
+    branches:
+      - development
 
 env:
   AWS_REGION: ${{ vars.AWS_REGION }}
@@ -14,8 +16,8 @@ env:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
     environment: development
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
