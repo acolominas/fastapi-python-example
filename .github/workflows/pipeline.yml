@@ -1,0 +1,14 @@
+name: Reusable Workflow pipeline
+
+on:
+  workflow_dispatch:
+
+jobs:
+  dev:
+    name: Dev Deployment
+    uses: deploy-dev.yml
+
+  prod:
+    name: Prod Deployment
+    needs: dev
+    uses: deploy-prod.yml
