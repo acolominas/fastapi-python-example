@@ -1,7 +1,7 @@
 {
     "family": "aci-ecstsk-fastapi-dev-euw1-01",
-    "taskRoleArn": "arn:aws:iam::004914726163:role/aci-iamrole-fastapi-dev-euw1-01",
-    "executionRoleArn": "arn:aws:iam::004914726163:role/aci-iamrole-fastapi-dev-euw1-01",
+    "taskRoleArn": "arn:aws:iam::224322756201:role/aci-iamrole-fastapi-dev-euw1-01",
+    "executionRoleArn": "arn:aws:iam::224322756201:role/aci-iamrole-fastapi-dev-euw1-01",
     "containerDefinitions": [
         {
             "name": "dummy",
