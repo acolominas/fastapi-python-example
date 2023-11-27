@@ -1,7 +1,9 @@
 name: Deploy to ECS - Pro Environment
 
 on:
-  push:
+  pull_request:
+    types:
+      - closed
     branches:
       - main
 env:
