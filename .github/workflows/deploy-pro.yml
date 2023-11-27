@@ -6,6 +6,8 @@ on:
       - closed
     branches:
       - main
+    paths:
+      - 'app/**'
 env:
   ENVIRONMENT: ${{ github.base.ref }}
   ECR_REPOSITORY: ${{ vars.ECR_REPOSITORY }}
