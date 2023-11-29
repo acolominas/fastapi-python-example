@@ -10,6 +10,7 @@ WORKDIR /code
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
+
 # copy requirements file
 COPY ./requirements.txt /code/requirements.txt
 
