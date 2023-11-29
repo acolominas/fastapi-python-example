@@ -1,5 +1,7 @@
 # pull official base image
-FROM python:3.12.0-alpine
+FROM python:3.12.0-alpine as builder
+
+RUN apk update && apk upgrade --no-cache
 
 # set work directory
 WORKDIR /code
@@ -13,6 +15,11 @@ COPY ./requirements.txt /code/requirements.txt
 
 # install dependencies
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+
+FROM builder AS build2
+
+# set work directory
+WORKDIR /code
 
 # copy project
 COPY ./app /code/app
